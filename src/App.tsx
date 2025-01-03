@@ -1,9 +1,18 @@
 import { useState, useEffect } from 'react'
 import DarkModeToggle from './components/DarkModeToggle';
-import "./index.css"
+import ColorBanner from './components/ColorBanner';
+import "./index.scss"
+import Navbar from './components/NavBar';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (root.classList.contains('dark')) {
+      setIsDarkMode(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -15,9 +24,8 @@ function App() {
 
   return (
     <div className="bg-primary text-text min-h-screen">
-      <h1>test</h1>
-      <div className="bg-secondary w-20 h-20"></div>
-      <DarkModeToggle />
+      <Navbar setIsDarkMode={setIsDarkMode} />
+      <ColorBanner isDarkMode={isDarkMode}/>
     </div>
   );
 }

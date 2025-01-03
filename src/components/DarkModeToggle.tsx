@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
 
-function DarkModeToggle() {
+function DarkModeToggle({ setIsDarkMode }: { setIsDarkMode: (mode: boolean) => void }) {
   const [isToggled, setIsToggled] = useState(false);
 
   useEffect(() => {
-    if (isToggled) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isToggled]);
+    setIsDarkMode(isToggled);
+  }, [isToggled, setIsDarkMode]);
 
   return (
     <div

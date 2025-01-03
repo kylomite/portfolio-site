@@ -22,6 +22,9 @@ export default {
           dark: "var(--color-text-dark)",
         },
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],
