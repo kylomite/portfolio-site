@@ -10,13 +10,13 @@ function DarkModeToggle({ setIsDarkMode }: { setIsDarkMode: (mode: boolean) => v
   return (
     <div
       onClick={() => setIsToggled(!isToggled)}
-      className={`flex w-20 h-10 rounded-full transition-all duration-200 cursor-pointer ${
-        isToggled ? "bg-green-500" : "bg-gray-300"
+      className={`flex w-10 h-6 rounded-full transition-all duration-200 cursor-pointer ${
+        isToggled ? "bg-gray-300" : "bg-gray-700"
       }`}
     >
       <span
-        className={`h-10 w-10 bg-white rounded-full transition-all duration-200 ${
-          isToggled ? "ml-10" : ""
+        className={`h-6 w-6 bg-white rounded-full shadow-2xl shadow-slate-50 transition-all duration-200 ${
+          isToggled ? "ml-4" : ""
         }`}
       />
     </div>

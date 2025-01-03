@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react'
-import DarkModeToggle from './components/DarkModeToggle';
 import ColorBanner from './components/ColorBanner';
 import "./index.scss"
 import Navbar from './components/NavBar';
+import DynamicText from './components/DynamicText';
+import ProjectContainer from './components/ProjectContainer';
+import SkillsContainer from './components/SkillsContainer';
+import AboutMeContainer from './components/AboutMeContainer';
+import ContactContainer from './components/Contact';
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,9 +28,21 @@ function App() {
   }, [isDarkMode]);
 
   return (
-    <div className="bg-primary text-text min-h-screen">
-      <Navbar setIsDarkMode={setIsDarkMode} />
-      <ColorBanner isDarkMode={isDarkMode}/>
+    <div className="bg-primary text-text min-h-screen ">
+      {/* Place the ColorBanner in the background */}
+      <div className="fixed top-0 left-0 w-full h-screen z-0">
+        <ColorBanner isDarkMode={isDarkMode} />
+      </div>
+
+      {/* Content over the ColorBanner */}
+      <div className="relative z-10">
+        <Navbar setIsDarkMode={setIsDarkMode} />
+        <DynamicText />
+        <ProjectContainer />
+        <SkillsContainer />
+        <AboutMeContainer />
+        <ContactContainer />
+      </div>
     </div>
   );
 }

@@ -71,6 +71,7 @@
 .gradient-bg {
   @apply w-full h-screen relative overflow-hidden;
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  z-index: 0;
 }
 
 .gradient-container {
