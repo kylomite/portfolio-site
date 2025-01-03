@@ -29,19 +29,27 @@ function App() {
 
   return (
     <div className="bg-primary text-text min-h-screen ">
-      {/* Place the ColorBanner in the background */}
       <div className="fixed top-0 left-0 w-full h-screen z-0">
         <ColorBanner isDarkMode={isDarkMode} />
       </div>
 
-      {/* Content over the ColorBanner */}
       <div className="relative z-10">
         <Navbar setIsDarkMode={setIsDarkMode} />
-        <DynamicText />
-        <ProjectContainer />
-        <SkillsContainer />
-        <AboutMeContainer />
-        <ContactContainer />
+        <div id="home">
+          <DynamicText />
+        </div>
+        <div id="projects">
+          <ProjectContainer />
+        </div>
+        <div id="skills">
+          <SkillsContainer />
+        </div>
+        <div id="about">
+          <AboutMeContainer />
+        </div>
+        <div id="contact">
+          <ContactContainer />
+        </div>
       </div>
     </div>
   );

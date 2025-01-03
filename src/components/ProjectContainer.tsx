@@ -75,8 +75,8 @@ const ProjectContainer: React.FC = () => {
   }, []);
 
   return (
-    <main className="h-screen w-screen overflow-hidden m-18 flex flex-col items-center justify-center bg-[rgba(209,213,219,0.3)]">
-      <h1 className="mb-60 mt-18 text-2xl font-semibold">Projects</h1>
+    <main className=" mt-80 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
+      <h1 className=" mt-4 mb-2 text-2xl font-semibold">Projects</h1>
 
       <div
         className="relative w-full h-[60vmin] overflow-hidden"
@@ -87,49 +87,49 @@ const ProjectContainer: React.FC = () => {
           ref={trackRef}
           data-mouse-down-at="0"
           data-prev-percentage="0"
-          className="flex gap-[4vmin] absolute left-0 top-1/4 transform -translate-y-1/2"
+          className="flex gap-[4vmin] absolute left-0 top-1/2"
           style={{
             transform: "translate(0%, -50%)",
             userSelect: "none",
           }}
         >
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80"
             draggable="false"
           />
           <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center"
+            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
             src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             draggable="false"
           />
