@@ -8,10 +8,10 @@ function Navbar({ setIsDarkMode }: { setIsDarkMode: (value: boolean) => void }) 
       <div className="flex justify-between items-center">
         <h1 className="text-xl ">Kyle Delaney</h1>
         <div className="flex space-x-4">
-          <button >Projects</button>
-          <button >Skills</button>
-          <button >About Me</button>
-          <button >Contact</button>
+          <button className="transform hover:scale-125 transition-all duration-300">Projects</button>
+          <button className="transform hover:scale-125 transition-all duration-300">Skills</button>
+          <button className="transform hover:scale-125 transition-all duration-300">About Me</button>
+          <button className="transform hover:scale-125 transition-all duration-300">Contact</button>
           <DarkModeToggle setIsDarkMode={setIsDarkMode} />
         </div>
       </div>

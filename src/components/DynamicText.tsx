@@ -24,7 +24,7 @@ function DynamicText() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center p-96 text-4xl font-bold">
+    <div className="flex justify-center items-center p-52 text-4xl font-bold">
       <span ref={el} />
     </div>
   );
