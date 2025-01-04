@@ -1,4 +1,10 @@
 import React, { useRef, useEffect } from "react";
+import RancidLogo from "../assets/images/RancidTomatillosLogo.jpeg";
+import TeaTradeLogo from "../assets/images/teaTrade.png";
+import TrackerLogo from "../assets/images/TrackerLogo.png";
+import FutbolStatTrackerLogo from "../assets/images/FutbolStatTrackerLogo.png";
+import PokeGotchiLogo from "../assets/images/PokeGotchiLogo.png";
+import GymCrushLogo from "../assets/images/GymCrushLogo.png"
 
 const ProjectContainer: React.FC = () => {
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -29,7 +35,7 @@ const ProjectContainer: React.FC = () => {
       const percentage = (mouseDelta / maxDelta) * 100;
       const nextPercentageUnconstrained = prevPercentage + percentage;
 
-      let nextPercentage = Math.max(nextPercentageUnconstrained, -(track.children.length - 1) * 11.75);
+      let nextPercentage = Math.max(nextPercentageUnconstrained, -(track.children.length - 1) * 5.75);
       nextPercentage = Math.min(nextPercentage, 0);
 
       track.dataset.percentage = nextPercentage.toString();
@@ -75,12 +81,12 @@ const ProjectContainer: React.FC = () => {
   }, []);
 
   return (
-    <main className=" mt-80 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
+    <section className=" mt-80 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
       <h1 className=" mt-4 mb-2 text-2xl font-semibold">Projects</h1>
 
       <div
-        className="relative w-full h-[60vmin] overflow-hidden"
-        style={{ width: "100%", height: "60vmin" }}
+        className="relative w-full h-[68vmin] overflow-hidden"
+        style={{ width: "100%", height: "68vmin" }}
       >
         <div
           id="image-track"
@@ -93,49 +99,60 @@ const ProjectContainer: React.FC = () => {
             userSelect: "none",
           }}
         >
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80"
-            draggable="false"
-          />
-          <img
-            className="image w-[40vmin] h-[56vmin] object-cover object-center drop-shadow-2xl"
-            src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            draggable="false"
-          />
+          <div className="ml-8 relative w-[40vmin] h-[56vmin]">
+            <img
+              className="image w-full h-full object-cover object-center"
+              src={GymCrushLogo}
+              draggable="false"
+            />
+            <h2 className="flex justify-center border-t-4 border-slate-900 pt-1 text-xl"> Gym Crush</h2>
+          </div>
+          <div 
+          className="relative w-[40vmin] h-[56vmin]"
+          >
+            <img
+              className="image w-full h-full object-cover object-center"
+              // src="tets"
+              src={TrackerLogo}
+              draggable="false"
+            />
+            <h2 className="flex justify-center border-t-4 border-slate-900 pt-1 text-xl"> Job Tracker</h2>
+          </div>
+          <div className="relative w-[40vmin] h-[56vmin]">
+            <img
+              className="image w-full h-full object-cover object-center"
+              src={TeaTradeLogo}
+              draggable="false"
+            />
+            <h2 className="flex justify-center border-t-4 border-slate-900 pt-1 text-xl"> T-Trade</h2>
+          </div>
+          <div className="relative w-[40vmin] h-[56vmin] ">
+            <img
+              className="image w-full h-full object-cover object-center"
+              src={RancidLogo}
+              draggable="false"
+            />
+            <h2 className="flex justify-center border-t-4 border-slate-900 pt-1 text-xl"> Rancid Tomatillos</h2>
+          </div>
+          <div className="relative w-[40vmin] h-[56vmin] ">
+            <img
+              className="image w-full h-full object-cover object-center"
+              src={PokeGotchiLogo}
+              draggable="false"
+            />
+            <h2 className="flex justify-center border-t-4 border-slate-900 pt-1 text-xl"> Poke-Gotchi</h2>
+          </div>
+          <div className="relative w-[40vmin] h-[56vmin] ">
+            <img
+              className="image w-full h-full object-cover object-center"
+              src={FutbolStatTrackerLogo}
+              draggable="false"
+            />
+            <h2 className="flex justify-center border-t-4 border-slate-900 pt-1 text-xl"> Futbol Stat Tracker</h2>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

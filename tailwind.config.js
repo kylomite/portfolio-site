@@ -25,6 +25,9 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
+      boxShadow: {
+        'inner-xl': 'inset 0 6px 12px rgba(0, 0, 0, 0.8), inset 0 10px 20px rgba(0, 0, 0, 0.8)',
+      },
     },
   },
   plugins: [],

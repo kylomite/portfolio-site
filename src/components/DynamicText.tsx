@@ -13,8 +13,8 @@ function DynamicText() {
         'Optimized',
         'Reliable',
         ],
-      typeSpeed: 100,
-      backSpeed: 100,
+      typeSpeed: 80,
+      backSpeed: 80,
       loop: true
     });
 
@@ -24,9 +24,9 @@ function DynamicText() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center p-52 text-4xl font-bold">
-      <span ref={el} />
-    </div>
+    <main className="flex justify-center items-center text-center p-52 text-4xl font-bold">
+      <section>Kyle is <br /><span ref={el} /></section>
+    </main>
   );
 }
 

@@ -1,12 +1,42 @@
 const Projects = [
     {
       Title: "GymCrush",
+      Images: "",
+      Description: "",
+
+    },
+    {
+      Title: "Job Tracker",
+      Images: "",
+      Description: "",
+
+    },
+    {
+      Title: "Tea Trade",
+      Images: "",
+      Description: "",
+
+    },
+    {
+      Title: "Rancid Tomatillos",
+      Images: "",
+      Description: "",
+
+    },
+    {
+      Title: "Poke-Gotchi",
+      Image: "",
+      Description: "",
+
+    },
+    {
+      Title: "Futbol Stat Tracker",
       Image: "",
       Description: "",
 
     },
 ]
-const Skills = [
+export const Skills = [
   {
     FrontEnd: [
       "HTML",
@@ -15,17 +45,13 @@ const Skills = [
       "React",
       "TypeScript",
       "Tailwind"
-    ]
-  },
-  {
+    ],
     BackEnd: [
       "Ruby",
       "Ruby on Rails",
       "SQL",
       "PostgreSQL",
-    ]
-  },
-  {
+    ],
     Tools: [
       "RSpec",
       "Cypress",
@@ -38,20 +64,17 @@ const Skills = [
       "Vercel",
       "Adobe Suite",
       "Google Suite",
-    ]
-  },
-  {
+    ],
     Methods: [
-        "RESTful APIs",
-        "OOP",
-        "Functional Programming",
-        "TDD",
-        "E2E Testing",
-        "MVC Architecture",
-        "Microservice Architecture",
-
-
+      "RESTful APIs",
+      "OOP",
+      "Functional Programming",
+      "TDD",
+      "E2E Testing",
+      "MVC Architecture",
+      "Microservice Architecture",
     ]
   }
-]
+];
 const Contact = []
+
