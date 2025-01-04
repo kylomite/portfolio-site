@@ -4,7 +4,7 @@ import PencilPic2 from "../assets/Images/PencilPic2.png"
 import PenPic from "../assets/Images/PenPic.png"
 function AboutMeContainer() {
   return(
-    <section className="mt-80 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
+    <section className="mt-16 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
       <h1 className="mt-4 text-2xl font-semibold">About Me</h1>
       <div className="flex flex-col md:flex-row items-center justify-center gap-32">
         <img 
@@ -24,7 +24,7 @@ function AboutMeContainer() {
           />
         <img 
           src={PencilPic2}
-          alt="Pencil Drawing of Kiwi and an Aligator standing on a glass plate"
+          alt="Pencil Drawing of Kiwi and an Alligator standing on a glass plate"
           className="w-96 m-4 border-slate-600 border-2 drop-shadow-xl"
         />
         <img 

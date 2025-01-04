@@ -21,7 +21,7 @@ function Skill({ skillName }: { skillName: string }) {
       };
 
       const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-        e.currentTarget.style.backgroundColor = ""; // Resets to default
+        e.currentTarget.style.backgroundColor = ""
       };
     return (
       <div 

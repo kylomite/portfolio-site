@@ -12,10 +12,11 @@ function DynamicText() {
         'Curious',
         'Optimized',
         'Reliable',
+        'the web developer for you.'
         ],
       typeSpeed: 80,
       backSpeed: 80,
-      loop: true
+      loop: false
     });
 
     return () => {
@@ -24,9 +25,9 @@ function DynamicText() {
   }, []);
 
   return (
-    <main className="flex justify-center items-center text-center p-52 text-4xl font-bold">
-      <section>Kyle is <br /><span ref={el} /></section>
-    </main>
+  <main className="flex justify-center items-center h-screen text-center text-4xl font-bold">
+    <section>Kyle is <span ref={el} /> </section>
+  </main>
   );
 }
 

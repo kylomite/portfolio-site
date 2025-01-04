@@ -113,5 +113,4 @@ export const Skills = [
     ]
   }
 ];
-const Contact = []
 
