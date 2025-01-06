@@ -155,11 +155,34 @@
 //     </section>
 //   );
 // };
+import { Projects } from "../assets/Data";
+import { Link } from "react-router-dom";
+
 function ProjectContainer() {
-  return(
-    <section className=" mt-80 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
-           <h1 className=" mt-4 mb-2 text-2xl font-semibold">Projects</h1>
+  return (
+    <section className="mt-80 w-screen overflow-hidden flex flex-col items-center justify-center bg-[rgba(209,213,219,0.4)]">
+      <h1 className="mt-4 mb-2 text-2xl font-semibold">Projects</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {Projects.map((project) => (
+          <Link
+            to={`/project/${project.Title.toLowerCase().replace(/\s+/g, "-")}`}
+            key={project.Title}
+            className="flex flex-col items-center bg-white p-4 shadow-lg border-slate-900 border-2 hover:scale-105 transition"
+          >
+            {project.Logo && (
+              <img
+                src={project.Logo}
+                alt={project.Title}
+                className="w-32 h-32 object-contain mb-4"
+              />
+            )}
+            <h2 className="text-xl font-semibold mb-2">{project.Title}</h2>
+            <p className="text-sm text-gray-500">{project.Time}</p>
+          </Link>
+        ))}
+      </div>
     </section>
-  )
+  );
 }
+
 export default ProjectContainer;

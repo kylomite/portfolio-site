@@ -6,10 +6,11 @@ import "./index.scss"
 import Navbar from './components/NavBar';
 import DynamicText from './components/DynamicText';
 import ProjectContainer from './components/ProjectContainer';
+import Project from './components/Project';
 import SkillsContainer from './components/SkillsContainer';
 import AboutMeContainer from './components/AboutMeContainer';
 import ContactContainer from './components/Contact';
-import Resume from './components/Resume'
+import Resume from './components/Resume';
 
 
 function App() {
@@ -60,10 +61,8 @@ function App() {
                 </div>
               }
             />
-            <Route
-              path="/resume"
-              element={<Resume />}
-            />
+            <Route path="/project/:title" element={<Project />} />
+            <Route path="/resume" element={<Resume />} />
           </Routes>
         </div>
       </div>
