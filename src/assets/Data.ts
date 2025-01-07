@@ -9,7 +9,8 @@ import GymCrushLogo from "../assets/GymCrush/GymCrushLogo.png";
 
 export const Projects = [
     {
-      Title: "GymCrush",
+      Title: "Gym Crush",
+      Slug: "gym-crush",
       Logo: GymCrushLogo,
       Images: [],
       Description: "",
@@ -23,6 +24,7 @@ export const Projects = [
     },
     {
       Title: "Job Tracker",
+      Slug: "job-tracker",
       Logo: TrackerLogo,
       Images: [],
       Description: "",
@@ -35,12 +37,13 @@ export const Projects = [
       Time: "DEC 2024 - JAN 2025"
     },
     {
-      Title: "Poke-Gotchi",
+      Title: "Poke Gotchi",
+      Slug: "poke-gotchi",
       Logo: PokeGotchiLogo,
-      Image: [],
+      Images: [PokeGotchiLogo],
       Description: "Poké-Gochi, an interactive app where Trainers can interact, level up, and train virtual Pokémon. The main goal with this project was to build something from the ground up collaboratively with my team members. I had the opportunity to explore stretch tech by implementation of asynchronous jobs through Redis and Sidekiq to periodically update database values. My primary responsibilities on this project were centered on BE functionality, stretch tech implementation, and deployment",
       Tech: {
-        FE: [],
+        FE: ["Typescript"],
         BE: [ "Ruby", "Ruby on Rails", "sidekiq"],
         Tools: ["Heroku", "Redis"]
       },
@@ -49,8 +52,9 @@ export const Projects = [
     },
     {
       Title: "T-Trade",
+      Slug: "t-trade",
       Logo: TTradeLogo,
-      Images: [{TTradeGif}],
+      Images: [TTradeGif],
       Description: "T-Trade is an E-commerce website designed for vendors to view, search and edit their subscribers' subscriptions to tea deliveries. This project had a short 72 timeline. I prioritized time management as I worked on this full stack project while maintaining a focus on accessibility and responsiveness in my design. The application uses the Chrome Dev Tools Lighthouse feature to test accessibility achieving a 100% score.",
       Tech: {
         FE: ["HTML", "CSS", "Javascript", "React"],
@@ -62,6 +66,7 @@ export const Projects = [
     },
     {
       Title: "Rancid Tomatillos",
+      Slug: "rancid-tomatillos",
       Logo: RancidLogo,
       Images: [],
       Description: "",

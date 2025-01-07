@@ -55,15 +55,15 @@ function App() {
                   <div id="about">
                     <AboutMeContainer />
                   </div>
-                  <div id="contact">
-                    <ContactContainer />
-                  </div>
                 </div>
               }
             />
             <Route path="/project/:title" element={<Project />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>
+          <div id="contact">
+            <ContactContainer isDarkMode={isDarkMode} />
+          </div>
         </div>
       </div>
   );

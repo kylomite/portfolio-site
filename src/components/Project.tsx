@@ -5,10 +5,7 @@ import Skill from "./Skill";
 function Project() {
   const { title } = useParams<{ title: string }>();
 
-  const formattedTitle = title?.replace(/-/g, " ");
-  const project = Projects.find(
-    (proj) => proj.Title.toLowerCase() === formattedTitle?.toLowerCase()
-  );
+  const project = Projects.find((proj) => proj.Slug === title);
 
   if (!project) {
     return <div className="text-center">Project not found</div>;
@@ -26,7 +23,21 @@ function Project() {
       )}
       <p className="text-lg mb-4 ml-16 mr-16 text-center">{project.Description}</p>
 
-      <div className="w-11/12">
+      <section className="w-11/12">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Media Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {project.Images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`${project.Title} Media ${index + 1}`}
+              className="w-full h-auto object-cover border-slate-900 border-2 shadow-lg"
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="w-11/12">
         <h2 className="text-2xl font-semibold mb-6 text-center">Technologies</h2>
         {Object.entries(project.Tech).map(([category, skills], index) => (
           <section
@@ -43,9 +54,9 @@ function Project() {
             </div>
           </section>
         ))}
-      </div>
+      </section>
 
-      <p className="mt-4 text-sm">
+      <p className="m-4 text-sm">
         Team: {project.Team} | Time: {project.Time}
       </p>
     </div>
