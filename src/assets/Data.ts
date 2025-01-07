@@ -20,7 +20,11 @@ export const Projects = [
         Tools: []
       },
       Team: "Solo",
-      Time: "On going"
+      Time: "On going",
+      Repos: {
+        FE: "test",
+        BE: "test"
+      }
     },
     {
       Title: "Job Tracker",
@@ -34,7 +38,11 @@ export const Projects = [
         Tools: ["Git", "Github", "Slack"]
       },
       Team: "14 Members",
-      Time: "DEC 2024 - JAN 2025"
+      Time: "DEC 2024 - JAN 2025",
+      Repos: {
+        FE: "https://github.com/turingschool/tracker-crm-fe",
+        BE: "https://github.com/turingschool/tracker-crm"
+      }
     },
     {
       Title: "Poke Gotchi",
@@ -48,7 +56,11 @@ export const Projects = [
         Tools: ["Heroku", "Redis"]
       },
       Team: "5 Members",
-      Time: "OCT 2024 - NOV 2024"
+      Time: "OCT 2024 - NOV 2024",
+      Repos: {
+        FE: "",
+        BE: ""
+      }
     },
     {
       Title: "T-Trade",
@@ -62,7 +74,11 @@ export const Projects = [
         Tools: ["Git", "Github"]
       },
       Team: "Solo",
-      Time: "NOV 2024"
+      Time: "NOV 2024",
+      Repos: {
+        FE: "",
+        BE: ""
+      }
     },
     {
       Title: "Rancid Tomatillos",
@@ -75,7 +91,11 @@ export const Projects = [
         Tools: []
       },
       Team: "Pair",
-      Time: "OCT 2024"
+      Time: "OCT 2024",
+      Repos: {
+        FE: "",
+        BE: ""
+      }
     },
 ]
 export const Skills = [

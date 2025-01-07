@@ -58,7 +58,7 @@ function App() {
                 </div>
               }
             />
-            <Route path="/project/:title" element={<Project />} />
+            <Route path="/project/:title" element={<Project isDarkMode={isDarkMode} />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>
           <div id="contact">

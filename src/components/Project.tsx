@@ -1,8 +1,11 @@
 import { useParams } from "react-router-dom";
 import { Projects } from "../assets/Data";
 import Skill from "./Skill";
+import githubLogo from '../assets/Images/Octicons-mark-github.svg';
 
-function Project() {
+function Project({ isDarkMode }) {
+  
+  const svgColorFilter = isDarkMode ? 'invert(100%)' : 'invert(0%)';
   const { title } = useParams<{ title: string }>();
 
   const project = Projects.find((proj) => proj.Slug === title);
@@ -21,6 +24,50 @@ function Project() {
           className="w-64 h-64 object-contain mb-4"
         />
       )}
+
+<div className="mb-4 flex flex-col items-center">
+        <h2 className="text-lg font-semibold mb-2">Repositories</h2>
+        <div className="flex flex-col sm:flex-row gap-16 items-center">
+          {project.Repos.FE && (
+            <div className="flex items-center gap-2">
+              <span className="text-lg font-medium">FE:</span>
+              <a
+                href={project.Repos.FE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center transition-transform transform hover:scale-125 cursor-pointer"
+                style={{ filter: svgColorFilter }}
+              >
+                <img
+                  src={githubLogo}
+                  alt="Frontend Repository"
+                  className="w-8 h-8"
+                />
+              </a>
+            </div>
+          )}
+          {project.Repos.BE && (
+            <div className="flex items-center gap-2">
+              <span className="text-lg font-medium">BE:</span>
+              <a
+                href={project.Repos.BE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center transition-transform transform hover:scale-125 cursor-pointer"
+                style={{ filter: svgColorFilter }}
+              >
+                <img
+                  src={githubLogo}
+                  alt="Backend Repository"
+                  className="w-8 h-8"
+                />
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+
+
       <p className="text-lg mb-4 ml-16 mr-16 text-center">{project.Description}</p>
 
       <section className="w-11/12">
