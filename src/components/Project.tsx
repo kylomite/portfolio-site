@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { Projects } from "../assets/Data";
 import Skill from "./Skill";
 import githubLogo from '../assets/Images/Octicons-mark-github.svg';
+import URLImage from '../assets/Images/url.svg';
+
 
 function Project({ isDarkMode }) {
   
@@ -21,11 +23,11 @@ function Project({ isDarkMode }) {
         <img
           src={project.Logo}
           alt={project.Title}
-          className="w-64 h-64 object-contain mb-4"
+          className="w-64 h-64 sm:w-48 sm:h-48 lg:w-96 lg:h-96 object-contain mb-4"
         />
       )}
 
-<div className="mb-4 flex flex-col items-center">
+      <div className="mb-4 flex flex-col items-center">
         <h2 className="text-lg font-semibold mb-2">Repositories</h2>
         <div className="flex flex-col sm:flex-row gap-16 items-center">
           {project.Repos.FE && (
@@ -65,6 +67,24 @@ function Project({ isDarkMode }) {
             </div>
           )}
         </div>
+        {project.Deployment && (
+          <div className="mt-4 text-center">
+            <a
+              href={project.Deployment}
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" transition-transform transform hover:scale-125 inline-flex items-center gap-2"
+              style={{ filter: svgColorFilter }}
+            >
+              <span className="text-lg font-semibold">Deployment</span>
+              <img
+                src={URLImage}
+                alt="Image of a link"
+                className="w-8 h-8"
+              />
+            </a>
+          </div>
+        )}
       </div>
 
 
@@ -84,7 +104,7 @@ function Project({ isDarkMode }) {
         </div>
       </section>
 
-      <section className="w-11/12">
+      <section className="w-11/12 mt-4">
         <h2 className="text-2xl font-semibold mb-6 text-center">Technologies</h2>
         {Object.entries(project.Tech).map(([category, skills], index) => (
           <section
