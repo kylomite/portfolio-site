@@ -29,7 +29,7 @@ export const Projects = [
         FE: "https://github.com/turingschool/tracker-crm-fe",
         BE: "https://github.com/turingschool/tracker-crm"
       },
-      Deployment: ""
+      Deployment: "https://tracker-crm-fe-38f7cf1aaca5.herokuapp.com/"
     },
     {
       Title: "Poke Gotchi",
@@ -48,7 +48,7 @@ export const Projects = [
         FE: "https://github.com/jchirch/poke-gochi",
         BE: "https://github.com/jchirch/poke-gochi-API"
       },
-      Deployment: "test"
+      Deployment: ""
     },
     {
       Title: "T-Trade",
