@@ -3,7 +3,11 @@ import linkedInLogo from '../assets/Images/linkedIn.svg';
 import emailLogo from '../assets/Images/email.svg';
 
 
-function ContactContainer({ isDarkMode }) {
+interface ContactContainerProp {
+  isDarkMode: boolean;
+}
+
+function ContactContainer({ isDarkMode }: ContactContainerProp) {
   const svgColorFilter = isDarkMode ? 'invert(100%)' : 'invert(0%)';
 
   return (

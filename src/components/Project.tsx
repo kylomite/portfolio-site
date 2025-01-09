@@ -4,9 +4,29 @@ import Skill from "./Skill";
 import githubLogo from '../assets/Images/Octicons-mark-github.svg';
 import URLImage from '../assets/Images/url.svg';
 
+interface Project {
+  Title: string;
+  Slug: string;
+  Logo: string | null;
+  Repos: {
+    FE?: string;
+    BE?: string;
+  };
+  Deployment?: string;
+  Description: string;
+  Images: string[];
+  Tech: {
+    [category: string]: string[];
+  };
+  Team: string;
+  Time: string;
+}
 
-function Project({ isDarkMode }) {
-  
+interface ProjectProp {
+  isDarkMode: boolean;
+}
+
+function Project({ isDarkMode }: ProjectProp) {
   const svgColorFilter = isDarkMode ? 'invert(100%)' : 'invert(0%)';
   const { title } = useParams<{ title: string }>();
 
@@ -69,6 +89,7 @@ function Project({ isDarkMode }) {
         </div>
         {project.Deployment && (
           <div className="mt-4 text-center">
+            <h3 className="text-lg font-semibold">Deployment </h3>
             <a
               href={project.Deployment}
               target="_blank"
@@ -76,7 +97,6 @@ function Project({ isDarkMode }) {
               className=" transition-transform transform hover:scale-125 inline-flex items-center gap-2"
               style={{ filter: svgColorFilter }}
             >
-              <span className="text-lg font-semibold">Deployment</span>
               <img
                 src={URLImage}
                 alt="Image of a link"
@@ -86,7 +106,6 @@ function Project({ isDarkMode }) {
           </div>
         )}
       </div>
-
 
       <p className="text-lg mb-4 ml-16 mr-16 text-center">{project.Description}</p>
 
@@ -106,21 +125,26 @@ function Project({ isDarkMode }) {
 
       <section className="w-11/12 mt-4">
         <h2 className="text-2xl font-semibold mb-6 text-center">Technologies</h2>
-        {Object.entries(project.Tech).map(([category, skills], index) => (
-          <section
-            key={index}
-            className="mb-8 w-11/12 flex items-center border-b-2 border-slate-300 pb-4"
-          >
-            <div className="w-3/12 flex justify-center">
-              <h3 className="text-lg font-bold">{category}</h3>
-            </div>
-            <div className="w-10/12 flex flex-wrap justify-end gap-4">
-              {skills.map((skill, skillIndex) => (
-                <Skill key={skillIndex} skillName={skill} />
-              ))}
-            </div>
-          </section>
-        ))}
+        {Object.entries(project.Tech).map(
+          (
+            [category, skills]: [string, string[]],
+            index: number
+          ) => (
+            <section
+              key={index}
+              className="mb-8 w-11/12 flex items-center border-b-2 border-slate-300 pb-4"
+            >
+              <div className="w-3/12 flex justify-center">
+                <h3 className="text-lg font-bold">{category}</h3>
+              </div>
+              <div className="w-10/12 flex flex-wrap justify-end gap-4">
+                {skills.map((skill, skillIndex: number) => (
+                  <Skill key={skillIndex} skillName={skill} />
+                ))}
+              </div>
+            </section>
+          )
+        )}
       </section>
 
       <p className="m-4 text-sm">
