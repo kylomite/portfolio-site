@@ -44,7 +44,7 @@ function Navbar({ setIsDarkMode, isDarkMode }: { setIsDarkMode: (value: boolean)
         {/* Name Button */}
         <button
           onClick={() => handleNavigation("/", "home")}
-          className="text-xl pr-8 mt-4 sm:text-2xl md:text-3xl font-bold mx-auto md:mx-0"
+          className="text-xl pr-8 mt-4 sm:text-2xl md:text-3xl font-bold mx-auto md:mx-4"
         >
           Kyle Delaney
         </button>
