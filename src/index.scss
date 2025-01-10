@@ -39,13 +39,19 @@ html {
 
 @keyframes moveInCircle {
   0% {
-    transform: rotate(0deg);
+    transform: translate(50px, -50px) rotate(0deg);
+  }
+  25% {
+    transform: translate(150px, -50px) rotate(90deg);
   }
   50% {
-    transform: rotate(180deg);
+    transform: translate(150px, 50px) rotate(180deg);
+  }
+  75% {
+    transform: translate(50px, 150px) rotate(270deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(50px, -50px) rotate(360deg);
   }
 }
 
@@ -82,7 +88,7 @@ html {
 }
 
 .gradient-container {
-  filter: url(#goo);
+  filter: url(#goo) blur(25px);
   @apply w-full h-full;
 }
 
