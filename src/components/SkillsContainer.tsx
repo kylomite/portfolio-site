@@ -8,13 +8,15 @@ function SkillsContainer() {
       {Object.entries(Skills[0]).map(([category, skills], index) => (
         <section
           key={index}
-          className="mb-8 w-11/12 flex flex-row items-center border-b-2 border-slate-300 pb-4"
+          className="mb-8 w-11/12 flex flex-col md:flex-row items-center border-b-2 border-slate-300 pb-4"
         >
-          <div className="w-3/12 flex justify-center">
+          {/* Category aligned left */}
+          <div className="w-full md:w-3/12 flex justify-start md:justify-center mb-4 md:mb-0">
             <h2 className="text-md font-bold">{category}</h2>
           </div>
 
-          <div className="w-10/12 flex flex-wrap justify-end gap-4">
+          {/* Skills aligned right */}
+          <div className="w-full md:w-9/12 flex flex-wrap justify-start md:justify-end gap-4">
             {skills.map((skill, skillIndex) => (
               <Skill key={skillIndex} skillName={skill} />
             ))}

@@ -57,8 +57,8 @@ function ColorBanner({ isDarkMode }: { isDarkMode: boolean }) {
   }, []);
 
   return (
-    <div className="gradient-bg absolute top-0 left-0 w-full min-h-screen z-0">
-      <svg xmlns="http://www.w3.org/2000/svg" className="absolute -top-full">
+    <div className="gradient-bg absolute top-0 left-0 w-screen min-h-screen z-0 overflow-x-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" className="absolute-top-full">
         <defs>
           <filter id="goo">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
