@@ -39,19 +39,19 @@ html {
 
 @keyframes moveInCircle {
   0% {
-    transform: translate(50px, -50px) rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-    transform: translate(150px, -50px) rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
-    transform: translate(150px, 50px) rotate(180deg);
+    transform: rotate(180deg);
   }
   75% {
-    transform: translate(50px, 150px) rotate(270deg);
+    transform: rotate(270deg);
   }
   100% {
-    transform: translate(50px, -50px) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -114,7 +114,7 @@ html {
 
 .g3 {
   background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%);
-  animation: moveInCircle 40s linear infinite;
+  animation: moveInCircle 40s ease-in-out infinite;
 }
 
 .g4 {

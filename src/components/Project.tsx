@@ -107,37 +107,23 @@ function Project({ isDarkMode }: ProjectProp) {
         )}
       </div>
 
-      <p className="text-lg mb-4 ml-16 mr-16 text-center">{project.Description}</p>
+      <p className="text-lg mb-4 mx-4 text-center">{project.Description}</p>
 
-      <section className="w-11/12">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Media Gallery</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {project.Images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`${project.Title} Media ${index + 1}`}
-              className="w-full h-auto object-cover border-slate-900 border-2 shadow-lg"
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="w-11/12 mt-4">
+      <section className="w-full mt-8 px-4 sm:px-6">
         <h2 className="text-2xl font-semibold mb-6 text-center">Technologies</h2>
         {Object.entries(project.Tech).map(
-          (
-            [category, skills]: [string, string[]],
-            index: number
-          ) => (
+          ([category, skills]: [string, string[]], index: number) => (
             <section
               key={index}
-              className="mb-8 w-11/12 flex items-center border-b-2 border-slate-300 pb-4"
+              className="mb-8 w-full flex flex-col md:flex-row items-center border-b-2 border-slate-300 pb-4"
             >
-              <div className="w-3/12 flex justify-center">
-                <h3 className="text-lg font-bold">{category}</h3>
+              {/* Category aligned left */}
+              <div className="w-full md:w-4 md:pl-10 flex justify-start md:justify-center mb-4 md:mb-0">
+                <h3 className="text-md font-bold">{category}</h3>
               </div>
-              <div className="w-10/12 flex flex-wrap justify-end gap-4">
+
+              {/* Skills aligned right */}
+              <div className="w-full md:w-full flex flex-wrap justify-start md:justify-end gap-4">
                 {skills.map((skill, skillIndex: number) => (
                   <Skill key={skillIndex} skillName={skill} />
                 ))}
