@@ -15,7 +15,7 @@ function AboutMeContainer() {
           className="w-[90%] sm:w-[70%] md:w-[40%] lg:w-[36vmin] max-w-[36vmin] m-4 border-slate-900 border-2 drop-shadow-xl"
         />
         <p className="max-w-lg p-4 mr-2 text-center">
-          Born and raised in Chester County Pennsylvania, I have always valued creative expression. With a traditional education in graphic design and architecture I love recognizing everyday beauty in design and nature. Outside of work, you can usually find me observing the world around me on nature walks, or at my drafting table turning those observations into artwork. I have a soft spot for history and reading. I am looking for in-person and hybrid roles in Chester County Pennsylvania, Wilmington Delaware and Philadelphia Pennsylvania
+          Born and raised in Chester County Pennsylvania, I have always valued creative expression. With a traditional education in graphic design and architecture I love recognizing everyday beauty in design and nature. Outside of work, you can usually find me observing the world around me on nature walks, or at my drafting table turning those observations into artwork. I have a soft spot for history and reading. I am looking for in-person and hybrid roles in Chester County Pennsylvania, Philadelphia Pennsylvania, and Wilmington Delaware.
           <br />
           <br />
           Making art has always been a focus of mine. Feel free to view some of my work below.
